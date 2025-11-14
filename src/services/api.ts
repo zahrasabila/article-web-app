@@ -19,8 +19,8 @@ export interface Article {
   title: string;
   description: string;
   cover_image_url: string;
-  createdAt: string;
-  updatedAt: string;
+  createdAt?: string;
+  updatedAt?: string;
   publishedAt: string;
   category: {
     id: number;
@@ -28,7 +28,7 @@ export interface Article {
     name: string;
     description: string;
   };
-  comments: Array<{
+  comments?: Array<{
     id: number;
     documentId: string;
     content: string;

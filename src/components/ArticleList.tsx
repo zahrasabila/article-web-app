@@ -43,7 +43,16 @@ const ArticleList: React.FC = () => {
         {!isLoading && !isError && articles.length > 0 && (
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {articles.map((article) => (
-              <ArticleCard key={article.id} article={article} />
+              <ArticleCard
+                key={article.id}
+                documentId={article.documentId}
+                id={article.id}
+                title={article.title}
+                category={article.category}
+                cover_image_url={article.cover_image_url}
+                description={article.description}
+                publishedAt={article.publishedAt}
+              />
             ))}
           </div>
         )}

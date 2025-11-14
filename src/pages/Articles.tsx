@@ -11,11 +11,11 @@ import { useEffect, useState } from "react";
 
 export default function Articles() {
   const [searchParams, setSearchParams] = useSearchParams({});
-  // const urlTitle = searchParams.get("title") || "";
-  // const urlCategory = searchParams.get("category") || "";
+  const urlTitle = searchParams.get("title") || "";
+  const urlCategory = searchParams.get("category") || "";
 
-  const [categoryName, setCategoryName] = useState("");
-  const [searchQuery, setSearchQuery] = useState("");
+  const [categoryName, setCategoryName] = useState(urlTitle);
+  const [searchQuery, setSearchQuery] = useState(urlCategory);
 
   useEffect(() => {
     if (categoryName || searchQuery) {
@@ -107,7 +107,16 @@ export default function Articles() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
-            <ArticleCard key={article.id} article={article} />
+            <ArticleCard
+              key={article.id}
+              documentId={article.documentId}
+              id={article.id}
+              title={article.title}
+              category={article.category}
+              cover_image_url={article.cover_image_url}
+              description={article.description}
+              publishedAt={article.publishedAt}
+            />
           ))}
         </div>
 
