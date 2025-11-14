@@ -41,16 +41,11 @@ src/
 
 ## Cara Instalasi & Menjalankan Proyek
 
-1. Clone repository
-git clone https://github.com/<username-mu>/article-web-app.git
-[cd article-web-app](https://github.com/zahrasabila/article-web-app.git)
-
-2. Install dependencies
-npm install
-
-3. Jalankan di lokal
-npm run dev
-Buka http://localhost:5173 di browser.
+1. git clone https://github.com/zahrasabila/article-web-app.git
+2. cd article-web-app 
+3. npm install
+4. npm run dev
+5. http://localhost:5173 di browser.
 
 Fitur Aplikasi
 - Daftar artikel
