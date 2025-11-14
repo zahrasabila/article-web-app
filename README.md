@@ -43,7 +43,7 @@ src/
 
 1. Clone repository
 git clone https://github.com/<username-mu>/article-web-app.git
-cd article-web-app
+[cd article-web-app](https://github.com/zahrasabila/article-web-app.git)
 
 2. Install dependencies
 npm install
